@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="miLista"></ul>
+    <!-- <button id="add" onclick="agregarLi()">Agregar item</button> -->
+    <button id="add">Agregar item</button>
+
+    <script>
+
+        let contador = 1;
+
+        // .addEventListener("<el evento>", <Referencia a la función>)
+        document.getElementById("add").addEventListener("click", agregarLi);
+
+        function agregarLi() {
+            const elemento = document.createElement("li");
+            elemento.innerHTML = `Item ${contador} <button onclick="borrarLi(this)">Borrar</button>`;
+
+            let miLista = document.getElementById("miLista");
+            miLista.appendChild(elemento);
+
+            contador ++;
+        }
+
+        function borrarLi (elemento) {
+            // alert(elemento);
+            elemento.parentElement.remove();
+        }
+
+        // alert(agregarLi.name)
+
+
+
+
+
+
+
+
+        // Revisar por qué no funcionó ¿¿???
+
+        // document.getElementById("add").addEventListener("click", function () {
+        //     const elemento = document.createElement("li");
+        //     elemento.innerHTML = `Item ${contador} <button onclick="borrarLi(this)">Borrar</button>`;
+
+        //     let miLista = document.getElementById("miLista");
+        //     miLista.appendChild(elemento);
+
+        //     contador ++;
+        // });
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="texto">Texto original</p>
+    <button onclick="modificarEstilo()">Modificar estilo</button>
+
+    <script>
+        let tamaño = 50;
+
+        function modificarEstilo() {
+            const texto = document.getElementById("texto");
+            // tamaño de letra
+            // texto.style.fontSize = "50px";
+            // color de texto
+            texto.style.color = "red";
+
+            // ¿Cómo poder cambiar el tamaño deñ texto de 50px en 50px?
+            // texto.style.fontSize = tamaño + "px";
+            texto.style.fontSize = `${tamaño}px`;
+            tamaño += 50;
+        }
+
+    </script>
+</body>
+</html>
